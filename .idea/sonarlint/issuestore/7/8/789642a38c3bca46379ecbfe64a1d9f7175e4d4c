@@ -1,0 +1,17 @@
+
+J
+java:S1656"/Remove or correct this useless self-assignment.(¨„ÃÀûÿÿÿÿ
+E
+java:S1656"/Remove or correct this useless self-assignment.(ó·®æ
+R
+java:S4973"<Strings and Boxed types should be compared using "equals()".(µ‚ï®
+W
+java:S4973"<Strings and Boxed types should be compared using "equals()".(œÔúÿÿÿÿ
+R
+java:S4973"<Strings and Boxed types should be compared using "equals()".(µ‚ï®
+W
+java:S4973"<Strings and Boxed types should be compared using "equals()".(œÔúÿÿÿÿ
+€
+java:S4165"eRemove this useless assignment; "spanish" already holds the assigned value along all execution paths.(¨„ÃÀûÿÿÿÿ
+{
+java:S4165"eRemove this useless assignment; "english" already holds the assigned value along all execution paths.(ó·®æ

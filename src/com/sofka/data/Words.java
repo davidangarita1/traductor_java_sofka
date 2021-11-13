@@ -1,12 +1,12 @@
 package com.sofka.data;
 
+import javax.swing.*;
+import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
+import java.awt.event.ActionListener;
 import java.io.*;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import com.sofka.ui.MainUI;
+import java.util.*;
 
 public class Words {
     private File fileTxt = new File("archivo.txt");
@@ -57,6 +57,51 @@ public class Words {
         }
     }
 
+    public void getData(JTable table, Object[][] data) {
+        table.setModel(new DefaultTableModel(
+                data,
+                new String[]{"Español", "English"}
+        ));
+        TableColumnModel columns = table.getColumnModel();
+        columns.getColumn(0).setMinWidth(200);
+
+        DefaultTableCellRenderer centerRenderer = new DefaultTableCellRenderer();
+        centerRenderer.setHorizontalAlignment(JLabel.CENTER);
+        columns.getColumn(0).setCellRenderer(centerRenderer);
+        columns.getColumn(1).setCellRenderer(centerRenderer);
+    }
+
+    public void updateData(JTable table) throws IOException {
+        Object[][] data = readData().toArray(new Object[0][]);
+        getData(table, data);
+    }
+
+    public void seachData(String word, JTable table, int num) throws IOException {
+        Object[][] data = readData().toArray(new Object[0][]);
+
+        switch (num) {
+            case 1:
+                for (int i = 0; i < data.length; i++) {
+                    if (data[i][0].equals(word)) {
+                        Object[] row = {data[i][0], data[i][1]};
+                        Object[][] newData = {row};
+                        getData(table, newData);
+                    }
+                }
+                break;
+            case 2:
+                for (int i = 0; i < data.length; i++) {
+                    if (data[i][1].equals(word)) {
+                        Object[] row = {data[i][0], data[i][1]};
+                        Object[][] newData = {row};
+                        getData(table, newData);
+                    }
+                }
+        }
+
+
+    }
+
     public List<String[]> readData() throws IOException {
         int count = 0;
         String file = "archivo.txt";
@@ -70,5 +115,16 @@ public class Words {
             //Some error logging
         }
         return content;
+    }
+
+    public String CapitalizeName(String name) {
+        String result = "";
+        String firstLetStr = name.substring(0, 1);
+        String remLetStr = name.substring(1);
+
+        firstLetStr = firstLetStr.toUpperCase();
+        result = firstLetStr + remLetStr;
+
+        return result;
     }
 }

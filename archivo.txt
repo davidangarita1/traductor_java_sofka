@@ -12,7 +12,5 @@ Adulto,Adult
 Señor,Mr
 Caballero,Gentleman
 Dama,Lady
-Rosa,Pink
-Verde,Green
-Verde,Green
-Rojo,red
+Sol,Sun
+
