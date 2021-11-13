@@ -12,7 +12,7 @@
 ## ¿Cómo fue creado?
 Para este ejercicio se utilizo la herramienta GUIform del IDE IntelliJ idea con el que se puede crear una interface grafica de un formulario ejecutable.
 
-Se creo una clase llamada "Main" que es la clase principal y definimos lo siguiente:
+1) Se creo una clase llamada "Main" que es la clase principal y definimos lo siguiente:
 
 ```java
 public class Main {
@@ -44,12 +44,11 @@ public class Main {
 }
 ```
 
-Se creo un "package" llamado "ui" donde creamos el formulario con la herramienta "GUI Form" presionando click derecho en el "ui"/New/Swing UI Designer/GUI Form, posteriormente nos pedira un nombre y escribiremos MainUI.
+2) Se creo un "package" llamado "ui" donde creamos el formulario con la herramienta "GUI Form" presionando click derecho en el "ui"/New/Swing UI Designer/GUI Form, posteriormente nos pedira un nombre y escribiremos MainUI.
 
-Aqui nos mostrara la interfaz grafica del formulario y a la derecha tendremos un menu con los diferentes componentes que podremos agregar como lo son "JPanel", "JButton", "JLabel", etc.
-En la carpeta "ui" fueron creados dos archivos MainUI.form y MainUI.java.
+3) Aqui nos mostrara la interfaz grafica del formulario y a la derecha tendremos un menu con los diferentes componentes que podremos agregar como lo son "JPanel", "JButton", "JLabel", etc. En la carpeta "ui" fueron creados dos archivos MainUI.form y MainUI.java.
 
-Para el archivo MainUI.java crearemos 4 clases:
+4) Para el archivo MainUI.java crearemos 4 clases:
 
 ### MainUI
 Esta es la clase principal donde se crean los componentes del formulario.
